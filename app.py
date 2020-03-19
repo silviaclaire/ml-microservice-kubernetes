@@ -55,7 +55,7 @@ def predict():
     
     # Logging the input payload
     json_payload = request.json
-    LOG.info("JSON payload: \n&s", json_payload)
+    LOG.info("JSON payload: \n%s", str(json_payload))
     inference_payload = pd.DataFrame(json_payload)
     LOG.info("Inference payload DataFrame: \n%s", inference_payload)
     # scale the input
