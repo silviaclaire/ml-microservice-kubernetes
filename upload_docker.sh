@@ -7,12 +7,12 @@
 image="boston-housing-prediction"
 dockerpath="silviaclaire/"+$image
 
-# Step 2:  
+# Step 2:
 # Authenticate & tag
 echo "Docker ID and Image: $dockerpath"
-# docker login
-docker tag $image:lastest $dockerpath:lastest
+# docker login --username silviaclaire
+docker tag $image:latest $dockerpath:latest
 
 # Step 3:
 # Push image to a docker repository
-docker push $dockerpath:lastest
+docker push $dockerpath:latest
