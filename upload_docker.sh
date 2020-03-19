@@ -5,7 +5,7 @@
 
 # Create dockerpath
 image="boston-housing-prediction"
-dockerpath="silviaclaire/"+$image
+dockerpath="silviaclaire/$image"
 
 # Step 2:
 # Authenticate & tag

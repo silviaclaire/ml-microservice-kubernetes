@@ -7,7 +7,7 @@ external_port=8000
 
 # Create dockerpath
 image="boston-housing-prediction"
-dockerpath="silviaclaire/"+$image
+dockerpath="silviaclaire/$image"
 
 # Run the Docker Hub container with kubernetes
 kubectl create deployment $image --image=$dockerpath:v1
