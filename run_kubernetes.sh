@@ -3,7 +3,7 @@
 # This tags and uploads an image to Docker Hub
 
 # Port that exposed from our service to host
-port=8000
+external_port=8000
 
 # Create dockerpath
 image="boston-housing-prediction"
@@ -16,5 +16,5 @@ kubectl create deployment $image --image=$dockerpath:v1
 kubectl get pods
 
 # Forward the container port to a host
-kubectl expose deployment/$image --type="NodePort" --port $port
+kubectl expose deployment/$image --type="NodePort" --port $external_port
 service/$image exposed
