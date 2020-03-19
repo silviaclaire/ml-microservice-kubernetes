@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 
-# This tags and uploads an image to Docker Hub
-
 # Port that exposed from our service to host
 internal_port=80
 external_port=8000
