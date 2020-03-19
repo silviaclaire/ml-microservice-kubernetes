@@ -17,4 +17,3 @@ kubectl get pods
 
 # Forward the container port to a host
 kubectl expose deployment/$image --type="NodePort" --port $external_port
-service/$image exposed
