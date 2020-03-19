@@ -10,7 +10,7 @@ image="boston-housing-prediction"
 dockerpath="silviaclaire/$image"
 
 # Run the Docker Hub container with kubernetes
-kubectl create deployment $image --image=$dockerpath:v1
+kubectl create deployment $image --image=$dockerpath:latest
 
 # List kubernetes pods
 kubectl get pods
