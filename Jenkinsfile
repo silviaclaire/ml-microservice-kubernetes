@@ -1,7 +1,6 @@
 pipeline {
   environment {
     version = '1.0'
-    gitURL = 'https://github.com/silviaclaire/ml-microservice-kubernetes.git'
     registry = 'silviaclaire/boston-housing-prediction'
     registryCredential = 'dockerhub'
     internal_port = 80
@@ -10,11 +9,6 @@ pipeline {
   }
   agent any
   stages {
-    stage('Cloning Git') {
-      steps {
-        git gitURL
-      }
-    }
     stage('Build') {
       steps {
         script {
