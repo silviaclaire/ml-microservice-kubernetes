@@ -1,0 +1,18 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: ml-microservice-kubernetes-1.0
+spec:
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        name: boston-housing-prediction
+        version: "1.0"
+    spec:
+      containers:
+        - name: boston-housing-prediction
+          image: silviaclaire/boston-housing-prediction:1.0
+          ports:
+            - name: http
+              containerPort: 80
